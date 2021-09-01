@@ -18,6 +18,8 @@ public class employee implements Serializable {
     @Column(nullable = false, updatable = false)
     private String employeeCode;
 
+    public employee() {}
+
     public employee(String name, String email, String jobTitle, String phone, String imageURL,String employeeCode){
     this.name = name;
     this.email = email;
@@ -82,5 +84,18 @@ public class employee implements Serializable {
 
     public void setEmployeeCode(String employeeCode) {
         this.employeeCode = employeeCode;
+    }
+
+    @Override
+    public String toString() {
+        return "employee{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", email='" + email + '\'' +
+                ", jobTitle='" + jobTitle + '\'' +
+                ", phone='" + phone + '\'' +
+                ", imageURL='" + imageURL + '\'' +
+                ", employeeCode='" + employeeCode + '\'' +
+                '}';
     }
 }
